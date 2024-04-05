@@ -2,12 +2,17 @@
 
 namespace App\EightTwo;
 
-interface I {
-    // We may naively assume that the PHP constant is always a string.
+interface I
+{
     const PHP = 'PHP 8.2';
 }
 
-class TypedClassConstants implements I {
-    // But implementing classes may define it as an array.
-    const PHP = [];
+abstract class A implements I
+{
+    const PHP = ['version' => '8.2'];
+}
+
+class TypedClassConstants extends A
+{
+    const PHP = 8.2;
 }

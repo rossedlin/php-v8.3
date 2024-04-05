@@ -2,13 +2,17 @@
 
 namespace App\EightThree;
 
-interface I {
-    const string PHP = 'PHP 8.3';
+interface I
+{
+    const float PHP = 8.3;
 }
 
-class TypedClassConstants implements I {
-    const string PHP = [];
+abstract class A implements I
+{
+    const PHP = ['version' => '8.3'];
 }
 
-// Fatal error: Cannot use array as value for class constant
-// Foo::PHP of type string
+class TypedClassConstants extends A
+{
+    const string PHP = "8.3";
+}
