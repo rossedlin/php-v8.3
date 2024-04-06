@@ -16,18 +16,22 @@ pre('Hi, this is PHP v' . PHP_VERSION);
 /**
  * DeepCloningOfReadOnlyProperties
  */
-//$instance = new EightThree\DeepCloningOfReadOnlyProperties();
-//$cloned = clone $instance;
-//
-//pre($instance->name);
-//pre($cloned->name);
-//$cloned->name = 'Code with Ross';
+$instance = new EightThree\DeepCloneReadOnlyClass(new EightThree\NormalClass());
+$cloned   = clone $instance;
+
+pre($instance->class->hello);
+pre($cloned->class->hello);
+
+$instance->class->hello = 'Code with Ross';
+
+pre($instance->class->hello);
+pre($cloned->class->hello);
 
 /**
  * New Json Validate Function
  */
-pre(EightThree\NewJsonValidateFunction::valid());
-pre(EightThree\NewJsonValidateFunction::notValid());
+//pre(EightThree\NewJsonValidateFunction::valid());
+//pre(EightThree\NewJsonValidateFunction::notValid());
 
 /**
  * New Override Attribute
@@ -37,14 +41,14 @@ pre(EightThree\NewJsonValidateFunction::notValid());
 /**
  *
  */
-pre(EightThree\DynamicClassConstantFetch::{'WHO_AM_I'});
+//pre(EightThree\DynamicClassConstantFetch::{'WHO_AM_I'});
 
 /**
  * New Randomizer::getBytesFromString() method
  */
-pre(EightThree\NewRandomizerMethods::getBytesFromString());
-pre(EightThree\NewRandomizerMethods::getFloat());
-pre(EightThree\NewRandomizerMethods::nextFloat());
+//pre(EightThree\NewRandomizerMethods::getBytesFromString());
+//pre(EightThree\NewRandomizerMethods::getFloat());
+//pre(EightThree\NewRandomizerMethods::nextFloat());
 
 /**
  * Command line linter supports multiple files
