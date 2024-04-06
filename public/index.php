@@ -14,6 +14,22 @@ pre('Hi, this is PHP v' . PHP_VERSION);
 //pre(EightThree\TypedClassConstants::PHP); //Fatal error in v8.3, runs in v8.2
 
 /**
+ * DeepCloningOfReadOnlyProperties
+ */
+//$instance = new EightThree\DeepCloningOfReadOnlyProperties();
+//$cloned = clone $instance;
+//
+//pre($instance->name);
+//pre($cloned->name);
+//$cloned->name = 'Code with Ross';
+
+/**
+ * New Json Validate Function
+ */
+pre(EightThree\NewJsonValidateFunction::valid());
+pre(EightThree\NewJsonValidateFunction::notValid());
+
+/**
  * New Override Attribute
  */
 //pre(EightThree\NewOverrideAttribute::JustATestDoNotPanic()); //Fatal error in v8.3
