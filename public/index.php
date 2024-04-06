@@ -14,6 +14,11 @@ pre(EightTwo\TypedClassConstants::PHP); //Runs in v8.3 & v8.2
 //pre(EightThree\TypedClassConstants::PHP); //Fatal error in v8.3, runs in v8.2
 
 /**
+ * New Override Attribute
+ */
+//pre(EightThree\NewOverrideAttribute::JustATestDoNotPanic()); //Fatal error in v8.3
+
+/**
  *
  */
 //$searchableConstant = 'PHP';
