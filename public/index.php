@@ -5,12 +5,12 @@ require __DIR__ . '/../vendor/autoload.php';
 use \App\EightTwo;
 use \App\EightThree;
 
-pre('Hi, this is PHP v8.3');
+pre('Hi, this is PHP v' . PHP_VERSION);
 
 /**
  * Typed Class Constants
  */
-pre(EightTwo\TypedClassConstants::PHP); //Runs in v8.3 & v8.2
+//pre(EightTwo\TypedClassConstants::PHP); //Runs in v8.3 & v8.2
 //pre(EightThree\TypedClassConstants::PHP); //Fatal error in v8.3, runs in v8.2
 
 /**
@@ -21,9 +21,7 @@ pre(EightTwo\TypedClassConstants::PHP); //Runs in v8.3 & v8.2
 /**
  *
  */
-//$searchableConstant = 'PHP';
-
-//var_dump(constant(Foo::class . "::{$searchableConstant}"));
+pre(EightThree\DynamicClassConstantFetch::{'WHO_AM_I'});
 
 /**
  * New Randomizer::getBytesFromString() method
