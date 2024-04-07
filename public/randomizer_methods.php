@@ -10,10 +10,3 @@ echo('<br/>');
 
 echo($randomizer->getFloat(10.0, 99.0));
 echo('<br/>');
-
-print_r([
-    $randomizer->nextFloat(),
-    $randomizer->nextFloat(),
-    $randomizer->nextFloat(),
-    $randomizer->nextFloat(),
-]);
