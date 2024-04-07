@@ -1,18 +1,18 @@
 <?php
 
-namespace App\EightThree;
-
-interface I
+interface F
 {
     const float PHP = 8.3;
 }
 
-abstract class A implements I
+abstract class A implements F
 {
     const PHP = ['version' => '8.3'];
 }
 
 class TypedClassConstants extends A
 {
-    const string PHP = "8.3";
+    const PHP = "8.3";
 }
+
+var_dump(TypedClassConstants::PHP);
