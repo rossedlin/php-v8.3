@@ -9,4 +9,3 @@ echo($randomizer->getInt(10, 99));
 echo('<br/>');
 
 echo($randomizer->getFloat(10.0, 99.0));
-echo('<br/>');

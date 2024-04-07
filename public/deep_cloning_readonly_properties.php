@@ -19,9 +19,6 @@ class NormalClass
 $instance = new ReadOnlyClass(new NormalClass());
 $cloned = clone $instance;
 
-echo($instance->class->hello); echo '<br/>';
-echo($cloned->class->hello); echo '<br/>';
-
 $instance->class->hello = 'Code with Ross';
 
 echo($instance->class->hello); echo '<br/>';

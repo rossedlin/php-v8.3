@@ -7,12 +7,12 @@ interface F
 
 abstract class A implements F
 {
-    const PHP = ['version' => '8.3'];
+    const float PHP = 8.33;
 }
 
 class TypedClassConstants extends A
 {
-    const PHP = "8.3";
+    const float PHP = 8.3;
 }
 
 var_dump(TypedClassConstants::PHP);
